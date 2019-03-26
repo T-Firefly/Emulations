@@ -273,7 +273,9 @@ public class DownloadService extends Service {
 
         startInterval();
         mDownloadManager.addTask(task);
-        invokeListener(info);
+        synchronized (mListeners) {
+            invokeListener(info);
+        }
     }
 
     private void startInterval() {
