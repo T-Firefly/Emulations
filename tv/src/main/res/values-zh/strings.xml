@@ -217,4 +217,5 @@
     <string name="notice">提示</string>
     <string name="use_new_api">使用The Games DB新API (beta)</string>
     <string name="limit_per_ip_summary">每个ip每个月限制1000次请求</string>
+    <string name="no_file_picker">未发现文件选择器。</string>
 </resources>

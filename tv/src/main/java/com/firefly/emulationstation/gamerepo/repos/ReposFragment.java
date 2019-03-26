@@ -6,10 +6,13 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -124,11 +127,22 @@ public class ReposFragment extends Fragment implements ReposContract.View {
                         addFromUrlDialog.show(getFragmentManager(), "AddFromUrlDialog");
                         break;
                     case R.string.add_from_zip:
+
                         Intent intent = new Intent("com.firefly.FILE_PICKER");
-                        intent.putExtra("selectType", 1);
-                        intent.putExtra("supportNet", false);
-                        intent.putExtra("title", getString(R.string.select_file_title));
-                        startActivityForResult(intent, REQUEST_CODE_OPEN_DOCUMENT);
+                        final PackageManager mgr = getActivity().getPackageManager();
+                        List<ResolveInfo> list =
+                                mgr.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+
+                        if (list.isEmpty()) {
+                            // TODO add DocumentsUI picker support
+                            Utils.showToast(getActivity(), R.string.no_file_picker);
+                        } else {
+                            intent.putExtra("selectType", 1);
+                            intent.putExtra("supportNet", false);
+                            intent.putExtra("title", getString(R.string.select_file_title));
+                            startActivityForResult(intent, REQUEST_CODE_OPEN_DOCUMENT);
+                        }
+
                         break;
                 }
             }
