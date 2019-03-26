@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:summary="All settings for Emulation Station"
+    android:title="@string/settings">
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="prefs_check_gamepad"
+        android:title="@string/check_gamepad" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="prefs_show_star"
+        android:title="@string/show_star_header_item" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="prefs_delete_not_exists_rom"
+        android:title="@string/delete_not_exists_rom"
+        android:summary="@string/delete_not_exists_rom_summary"/>
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="prefs_show_recommended"
+        android:title="@string/settings_show_recommended" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="prefs_use_new_api"
+        android:summary="@string/limit_per_ip_summary"
+        android:title="@string/use_new_api" />
+    <PreferenceCategory
+        android:title="@string/pref_category_control">
+        <Preference
+            android:key="prefs_key_map"
+            android:title="@string/settings_key_map"
+            android:icon="@drawable/dpad"
+            android:fragment="com.firefly.emulationstation.settings.keymap.KeyMapSettingsFragment">
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/other">
+        <Preference
+            android:fragment="com.firefly.emulationstation.settings.systems.SystemsFragment"
+            android:icon="@mipmap/ic_game_platform"
+            android:key="prefs_show_system"
+            android:title="@string/systems_enable">
+        </Preference>
+        <Preference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_info_white"
+            android:key="prefs_about"
+            android:title="@string/about_app">
+            <intent
+                android:targetClass="com.firefly.emulationstation.settings.about.AboutActivity"
+                android:targetPackage="com.firefly.emulationstation" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

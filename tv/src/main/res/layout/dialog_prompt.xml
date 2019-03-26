@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@android:id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:paddingBottom="0dp"
+        android:paddingEnd="@dimen/prompt_dialog_padding"
+        android:paddingStart="@dimen/prompt_dialog_padding"
+        android:paddingTop="@dimen/prompt_dialog_padding"
+        android:text="@string/notice"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/prompt_dialog_padding"
+        android:paddingEnd="@dimen/prompt_dialog_padding"
+        android:paddingStart="@dimen/prompt_dialog_padding"
+        android:paddingTop="0dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/button_cancel"
+            style="@style/DialogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:text="@android:string/cancel"
+            android:visibility="gone" />
+
+        <Space
+            android:layout_width="26dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_ok"
+            style="@style/DialogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/ok"
+            android:visibility="gone">
+
+            <requestFocus />
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>

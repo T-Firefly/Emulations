@@ -1,0 +1,43 @@
+{
+    "id": "com.firefly",
+    "name": {
+        "default": "ES repository",
+        "zh": "ES仓库"
+    },
+    "description": {
+        "default": "This is a official repository.",
+        "zh": "这是一个官方仓库"
+    },
+    "version": "1.0.0",
+    "url": "https://raw.githubusercontent.com/hyt-tchip/com.firefly/master/repo.json",
+    "platforms": [
+        {
+            "platformId": "arcade",
+            "url": "https://raw.githubusercontent.com/hyt-tchip/com.firefly/master/platforms/arcade.json"
+        },
+        {
+            "platformId": "nes",
+            "url": "https://raw.githubusercontent.com/hyt-tchip/com.firefly/master/platforms/nes.json"
+        },
+        {
+            "platformId": "gb",
+            "url": "https://raw.githubusercontent.com/hyt-tchip/com.firefly/master/platforms/gb.json"
+        },
+        {
+            "platformId": "gbc",
+            "url": "https://raw.githubusercontent.com/hyt-tchip/com.firefly/master/platforms/gbc.json"
+        },
+        {
+            "platformId": "gba",
+            "url": "https://raw.githubusercontent.com/hyt-tchip/com.firefly/master/platforms/gba.json"
+        },
+        {
+            "platformId": "pc",
+            "url": "https://raw.githubusercontent.com/hyt-tchip/com.firefly/master/platforms/nxengine.json"
+        },
+        {
+            "platformId": "n64",
+            "url": "https://raw.githubusercontent.com/hyt-tchip/com.firefly/master/platforms/n64.json"
+        }
+    ]
+}

@@ -1,0 +1,181 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "58b28853be5f253ab20d8fbfc1cfe2bb",
+    "entities": [
+      {
+        "tableName": "Game",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `displayNames` TEXT, `description` TEXT, `path` TEXT NOT NULL, `backgroundImageUrl` TEXT, `cardImageUrl` TEXT, `icon` TEXT, `videoUrl` TEXT, `developer` TEXT, `rating` REAL NOT NULL, `system` TEXT, `isScraped` INTEGER NOT NULL, `isStar` INTEGER NOT NULL, PRIMARY KEY(`path`))",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "displayNames",
+            "columnName": "displayNames",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "path",
+            "columnName": "path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "backgroundImageUrl",
+            "columnName": "backgroundImageUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardImageUrl",
+            "columnName": "cardImageUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "icon",
+            "columnName": "icon",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "videoUrl",
+            "columnName": "videoUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "developer",
+            "columnName": "developer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "system",
+            "columnName": "system",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isScraped",
+            "columnName": "isScraped",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isStar",
+            "columnName": "isStar",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "path"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "GameRomPath",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`path` TEXT NOT NULL, `system` TEXT, `isScanned` INTEGER NOT NULL, `scanDate` TEXT, PRIMARY KEY(`path`))",
+        "fields": [
+          {
+            "fieldPath": "path",
+            "columnName": "path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "system",
+            "columnName": "system",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isScanned",
+            "columnName": "isScanned",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scanDate",
+            "columnName": "scanDate",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "path"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Fanart",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `original` TEXT, `thumb` TEXT, `game` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "original",
+            "columnName": "original",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "thumb",
+            "columnName": "thumb",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "game",
+            "columnName": "game",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"58b28853be5f253ab20d8fbfc1cfe2bb\")"
+    ]
+  }
+}

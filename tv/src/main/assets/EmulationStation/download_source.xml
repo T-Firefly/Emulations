@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<res>
+    <retroarch name="retroarch.apk">https://github.com/hyt-tchip/retroarch-release/raw/master/version.json</retroarch>
+    <cores>
+        <core name="fbalpha_libretro_android.so.zip">
+            http://buildbot.libretro.com/nightly/android/latest/armeabi-v7a/fbalpha_libretro_android.so.zip
+        </core>
+        <core name="nestopia_libretro_android.so.zip">
+            http://buildbot.libretro.com/nightly/android/latest/armeabi-v7a/nestopia_libretro_android.so.zip
+        </core>
+        <core name="gambatte_libretro_android.so.zip">
+            http://buildbot.libretro.com/nightly/android/latest/armeabi-v7a/gambatte_libretro_android.so.zip
+        </core>
+        <core name="mgba_libretro_android.so.zip">
+            http://buildbot.libretro.com/nightly/android/latest/armeabi-v7a/mgba_libretro_android.so.zip
+        </core>
+        <core name="nxengine_libretro_android.so.zip">
+            http://buildbot.libretro.com/nightly/android/latest/armeabi-v7a/nxengine_libretro_android.so.zip
+        </core>
+        <core name="mupen64plus_libretro_android.so.zip">
+            http://buildbot.libretro.com/nightly/android/latest/armeabi-v7a/mupen64plus_libretro_android.so.zip
+        </core>
+    </cores>
+</res>

@@ -1,0 +1,35 @@
+<resources>
+    <color name="accent">#1C9BBE</color>
+    <color name="background_gradient_start">#000000</color>
+    <color name="background_gradient_end">#DDDDDD</color>
+    <color name="fastlane_background">#B2000000</color>
+    <color name="search_opaque">#00ffaa3f</color>
+    <color name="selected_background">#27BBFB</color>
+    <color name="detail_background">#0096a6</color>
+    <color name="soft_opaque">#30000000</color>
+    <color name="img_soft_opaque">#30FF0000</color>
+    <color name="img_full_opaque">#00000000</color>
+    <color name="black_opaque">#AA000000</color>
+    <color name="black">#59000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="orange_transparent">#AAFADCA7</color>
+    <color name="orange">#FADCA7</color>
+    <color name="yellow">#EEFF41</color>
+    <color name="default_background">#3d3d3d</color>
+    <color name="detail_row_background">#61686d</color>
+    <color name="icon_bg_dark">#025870</color>
+    <color name="text_bg_light">#1c9bbe</color>
+    <color name="repo_item_bg_dark">#222324</color>
+    <color name="text_on_blur">#FFB5B5B5</color>
+    <color name="text_on_focus">#FFFFFFFF</color>
+    <color name="color_progress_bg">#2A2A2A</color>
+    <color name="color_progress">#3084E8</color>
+    <color name="default_browse_fragment_bg">#2B323E</color>
+    <color name="image_card_view_title">@android:color/white</color>
+    <color name="text_bg_selected">#161617</color>
+    <color name="guide_bg">#2B323E</color>
+    <color name="menu_dialog_bg">#28292B</color>
+
+    <!-- disable shade on the right of HeadersFragment -->
+    <drawable name="lb_headers_right_fading">@android:color/transparent</drawable>
+</resources>

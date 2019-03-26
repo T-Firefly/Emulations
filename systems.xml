@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systems>
+    <system>
+        <name>Neogeo</name>
+        <system>arcade</system>
+        <emulator>
+            <name>retroarch</name>
+            <core>${asset}/cores/mame_libretro_android.so</core>
+            <config>${system}/config/retroarch.cfg</config>
+        </emulator>
+        <romPath>/sdcard/MAME4droid/roms/</romPath>
+    </system>
+</systems>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systems>
+    <system>
+        <name>Arcade</name>
+        <platform>arcade</platform>
+        <extension>.zip</extension>
+        <emulator>
+            <name>retroarch</name>
+            <core>${ES_DIR}/cores/fbalpha_libretro_android.so</core>
+        </emulator>
+        <romPath>${device}/EmulationStation/roms/arcade</romPath>
+    </system>
+    <system>
+        <name>PSP</name>
+        <platform>psp</platform>
+        <enable>false</enable>
+        <extension>.iso .cue</extension>
+        <emulator>
+            <name>retroarch</name>
+            <core>${ES_DIR}/cores/ppsspp_libretro_android.so</core>
+        </emulator>
+        <romPath>${device}/EmulationStation/roms/psp/</romPath>
+    </system>
+    <system>
+        <name>NES/FC</name>
+        <platform>nes</platform>
+        <extension>.fc .nes</extension>
+        <emulator>
+            <name>retroarch</name>
+            <core>${ES_DIR}/cores/nestopia_libretro_android.so</core>
+        </emulator>
+        <romPath>${device}/EmulationStation/roms/nes</romPath>
+    </system>
+    <system>
+        <name>Gameboy</name>
+        <platform>gb</platform>
+        <extension>.gb .dmg</extension>
+        <emulator>
+            <name>retroarch</name>
+            <core>${ES_DIR}/cores/gambatte_libretro_android.so</core>
+        </emulator>
+        <romPath>${device}/EmulationStation/roms/gb</romPath>
+    </system>
+    <system>
+        <name>Gameboy Color</name>
+        <platform>gbc</platform>
+        <extension>.gbc</extension>
+        <emulator>
+            <name>retroarch</name>
+            <core>${ES_DIR}/cores/gambatte_libretro_android.so</core>
+        </emulator>
+        <romPath>${device}/EmulationStation/roms/gbc</romPath>
+    </system>
+    <system>
+        <name>Gameboy Advance</name>
+        <platform>gba</platform>
+        <extension>.gba</extension>
+        <emulator>
+            <name>retroarch</name>
+            <core>${ES_DIR}/cores/mgba_libretro_android.so</core>
+        </emulator>
+        <romPath>${device}/EmulationStation/roms/gba</romPath>
+    </system>
+    <system>
+        <name>NXEngine</name>
+        <platform>pc</platform>
+        <extension>.exe</extension>
+        <emulator>
+            <name>retroarch</name>
+            <core>${ES_DIR}/cores/nxengine_libretro_android.so</core>
+        </emulator>
+        <romPath>${device}/EmulationStation/roms/NXEngine</romPath>
+    </system>
+    <system>
+        <name>Nintendo 64</name>
+        <platform>n64</platform>
+        <extension>.n64 .v64 .z64 .bin .u1 .ndd</extension>
+        <emulator>
+            <name>retroarch</name>
+            <core>${ES_DIR}/cores/mupen64plus_libretro_android.so</core>
+        </emulator>
+        <romPath>${device}/EmulationStation/roms/n64</romPath>
+    </system>
+</systems>

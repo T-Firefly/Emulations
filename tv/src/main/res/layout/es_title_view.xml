@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/title_badge"
+        android:layout_width="wrap_content"
+        android:maxWidth="@dimen/lb_browse_title_icon_max_width"
+        android:adjustViewBounds="true"
+        android:layout_height="@dimen/lb_browse_title_icon_height"
+        android:layout_gravity="center_vertical|end"
+        android:src="@null"
+        android:visibility="gone"
+        style="?attr/browseTitleIconStyle"
+        android:contentDescription="@string/image_desc" />
+
+    <TextView
+        android:id="@+id/title_text"
+        style="?attr/browseTitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/lb_browse_title_height"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="280dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="0.2"
+        android:shadowDy="0.2"
+        android:shadowRadius="4" />
+
+    <LinearLayout
+        android:id="@+id/search_orb"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:focusable="auto"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/search_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_search_bg"
+            android:contentDescription="@string/image_desc"
+            android:duplicateParentState="true"
+            android:src="@drawable/ic_search_white"
+            app:srcCompat="@drawable/ic_search_white">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/search_go"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</merge>

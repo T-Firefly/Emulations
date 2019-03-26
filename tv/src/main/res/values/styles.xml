@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.Leanback">
+    </style>
+
+    <style name="SettingCardTheme" parent="@style/Theme.Leanback">
+        <item name="imageCardViewStyle">@style/IconCardViewStyle</item>
+        <item name="imageCardViewTitleStyle">@style/IconCardTitleStyle</item>
+        <item name="imageCardViewImageStyle">@style/IconCardImageStyle</item>
+        <item name="imageCardViewInfoAreaStyle">@style/IconCardInfoAreaStyle</item>
+    </style>
+
+    <style name="IconCardViewStyle" parent="Widget.Leanback.ImageCardViewStyle">
+        <item name="lbImageCardViewType">Title</item>
+        <item name="cardBackground">@null</item>
+    </style>
+
+    <style name="IconCardTitleStyle" parent="Widget.Leanback.ImageCardView.TitleStyle">
+        <item name="android:maxLines">2</item>
+        <item name="android:minLines">2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="IconCardImageStyle" parent="Widget.Leanback.ImageCardView.ImageStyle">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:layout_height">96dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="IconCardInfoAreaStyle" parent="Widget.Leanback.ImageCardView.InfoAreaStyle">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:background">@null</item>
+        <item name="layout_viewType">main</item>
+    </style>
+
+    <style name="LeanbackPreferences" parent="Theme.Leanback">
+        <item name="preferenceTheme">@style/preferenceStyle</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:colorPrimary">@color/default_background</item>
+    </style>
+
+    <style name="preferenceStyle" parent="PreferenceThemeOverlay.v14.Leanback">
+        <item name="android:selectableItemBackground">@drawable/header_text_background_selector</item>
+        <item name="android:colorAccent">#b5b5b5</item>
+        <item name="preferenceFragmentListStyle">@style/preferenceFragmentListStyle</item>
+        <item name="preferenceCategoryStyle">@style/preferenceCategoryStyle</item>
+        <item name="checkBoxPreferenceStyle">@style/checkBoxPreferenceStyle</item>
+    </style>
+
+    <style name="preferenceFragmentListStyle" parent="@style/PreferenceFragmentList.Leanback">
+        <item name="android:background">@color/menu_dialog_bg</item>
+    </style>
+
+    <style name="preferenceCategoryStyle" parent="@style/LeanbackPreference.Category">
+        <item name="android:layout">@layout/custom_preference_category</item>
+    </style>
+
+    <style name="checkBoxPreferenceStyle" parent="@style/LeanbackPreference.CheckBoxPreference">
+        <item name="android:widgetLayout">@layout/custom_preference_widget_checkbox</item>
+    </style>
+
+    <style name="EmptyViewStyle" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+
+    <style name="ProgressHorizontal" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal</item>
+    </style>
+
+    <style name="DialogButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/dialog_button_selector</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:textAppearance">@style/dialogButtonText</item>
+    </style>
+
+    <style name="dialogButtonText" parent="@style/TextAppearance.AppCompat.Widget.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BaseDialogStyle" parent="Base.Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_activity_background</item>
+        <item name="android:windowMinWidthMajor">394dp</item>
+        <item name="android:windowMinWidthMinor">394dp</item>
+        <item name="android:windowElevation">4dp</item>
+    </style>
+
+    <style name="MenuDialogStyle" parent="BaseDialogStyle">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="RomActionNoticeDialogTheme" parent="BaseDialogStyle">
+    </style>
+
+    <style name="SystemInfoDialogTextViewStyle" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SystemInfoDialogTextViewLabelStyle" parent="SystemInfoDialogTextViewStyle">
+        <item name="android:textColor">@color/text_on_blur</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="SystemInfoDialogRowStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+</resources>

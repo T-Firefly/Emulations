@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="main_star_context_menu">
+        <item>@string/get_more_game</item>
+        <item>@string/menu_item_refresh</item>
+        <item>@string/scrape_games</item>
+    </array>
+    <array name="main_context_menu">
+        <item>@string/get_more_game</item>
+        <item>@string/menu_item_refresh</item>
+        <item>@string/scrape_games</item>
+        <item>@string/system_info</item>
+    </array>
+    <array name="repo_add_type">
+        <item>@string/add_from_url</item>
+        <item>@string/add_from_zip</item>
+    </array>
+
+    <array name="downloading_status_menu">
+        <item>@string/menu_item_view_info</item>
+        <item>@string/menu_item_pause</item>
+        <item>@string/menu_item_cancel</item>
+        <item>@string/menu_item_delete</item>
+    </array>
+    <array name="error_status_menu">
+        <item>@string/menu_item_view_info</item>
+        <item>@string/menu_item_restart</item>
+        <item>@string/menu_item_delete</item>
+    </array>
+
+    <array name="repogame_downloading_status_menu">
+        <item>@string/menu_item_pause</item>
+        <item>@string/menu_item_cancel</item>
+        <item>@string/menu_item_delete</item>
+    </array>
+    <array name="retrogame_error_status_menu">
+        <item>@string/menu_item_restart</item>
+        <item>@string/menu_item_cancel</item>
+        <item>@string/menu_item_delete</item>
+    </array>
+    <array name="retrogame_cancel_status_menu">
+        <item>@string/menu_item_restart</item>
+        <item>@string/menu_item_delete</item>
+    </array>
+
+    <array name="repo_actions">
+        <item>@string/repo_action_update</item>
+        <item>@string/repo_action_delete</item>
+    </array>
+</resources>

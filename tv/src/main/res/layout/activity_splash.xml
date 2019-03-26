@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/accent"
+    tools:context="com.firefly.emulationstation.SplashActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.Material.ProgressBar.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="33dp"
+            android:layout_weight="1" />
+
+        <TextSwitcher
+            android:id="@+id/initial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/initializing"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="268dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_download_in_backgroud"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/download_in_background"
+        android:visibility="invisible" />
+
+</RelativeLayout>

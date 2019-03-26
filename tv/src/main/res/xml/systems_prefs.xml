@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="prefs_systems_screen"
+    android:title="@string/systems_enable"
+    android:icon="@drawable/ic_mode_edit">
+
+</PreferenceScreen>

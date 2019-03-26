@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Android/project/EmulationsRelease/EmulationsRelease.iml" filepath="$USER_HOME$/Android/project/EmulationsRelease/EmulationsRelease.iml" />
+      <module fileurl="file://$USER_HOME$/Android/project/EmulationsRelease/tv/tv.iml" filepath="$USER_HOME$/Android/project/EmulationsRelease/tv/tv.iml" />
+    </modules>
+  </component>
+</project>

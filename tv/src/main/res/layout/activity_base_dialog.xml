@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.firefly.emulationstation.commom.BaseDialogActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#36383b"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#28292b">
+
+    </FrameLayout>
+</LinearLayout>

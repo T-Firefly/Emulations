@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/prompt_dialog_list_item_height"
+    android:background="@drawable/header_text_background_selector"
+    android:focusable="auto"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/prompt_dialog_padding"
+    android:paddingStart="@dimen/prompt_dialog_padding">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="0dp"
+        android:background="@null"
+        android:button="@drawable/checkbox_selector"
+        android:duplicateParentState="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

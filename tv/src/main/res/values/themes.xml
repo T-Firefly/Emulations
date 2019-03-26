@@ -1,0 +1,88 @@
+<resources>
+
+    <style name="Theme.Example.Leanback" parent="Theme.Leanback">
+        <item name="android:windowEnterTransition">@android:transition/fade</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:colorPrimary">@color/search_opaque</item>
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.Leanback">
+        <item name="android:colorPrimary">@color/accent</item>
+    </style>
+
+    <style name="GameListTheme" parent="Theme.Leanback.Browse">
+        <item name="defaultSearchColor">@color/search_opaque</item>
+        <item name="imageCardViewStyle">@style/ImageCardViewStyle</item>
+        <item name="imageCardViewTitleStyle">@style/ImageCardViewColoredTitle</item>
+        <item name="browseTitleViewLayout">@layout/title_view</item>
+        <item name="headersVerticalGridStyle">@style/LeanbackHeadersVerticalGridStyle</item>
+    </style>
+
+    <style name="CardPresenterNoDescription" parent="Theme.Leanback">
+        <item name="imageCardViewStyle">@style/ImageCardViewStyle</item>
+        <item name="imageCardViewTitleStyle">@style/ImageCardViewColoredTitle</item>
+        <item name="browseTitleViewLayout">@layout/title_view</item>
+        <item name="rowHorizontalGridStyle">@style/searchResultHorizontalGridStyle</item>
+    </style>
+
+    <style name="DialogActivityTheme" parent="Theme.Leanback">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@drawable/dialog_activity_background</item>
+        <item name="imageCardViewStyle">@style/ImageCardViewStyle</item>
+        <item name="itemsVerticalGridStyle">@style/ItemsVerticalGridStyle</item>
+    </style>
+
+    <style name="ImageCardViewStyle" parent="Widget.Leanback.ImageCardViewStyle">
+        <item name="lbImageCardViewType">Title|IconOnLeft</item>
+        <!--<item name="android:paddingTop">8dp</item>-->
+    </style>
+    <style name="ImageCardViewColoredTitle" parent="Widget.Leanback.ImageCardView.TitleStyle">
+        <item name="android:color">#FFFFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="GameInfoOptionTheme">
+        <item name="guidanceIconStyle">@style/GuidanceIconStyle</item>
+    </style>
+    <style name="GuidanceIconStyle" parent="Widget.Leanback.GuidanceIconStyle">
+        <item name="android:layout_width">280dp</item>
+        <item name="android:maxHeight">500dp</item>
+    </style>
+
+    <style name="LeanbackHeadersVerticalGridStyle"
+        parent="@style/Widget.Leanback.Headers.VerticalGridView">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="verticalMargin">0dp</item>
+        <item name="android:verticalSpacing">0dp</item>
+    </style>
+
+    <style name="ItemsVerticalGridStyle" parent="Widget.Leanback.GridItems.VerticalGridView">
+        <item name="android:gravity">start|top</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+    </style>
+
+    <style name="searchResultHorizontalGridStyle" parent="Widget.Leanback.Row.HorizontalGridView">
+        <item name="android:horizontalSpacing">24dp</item>
+        <item name="focusOutFront">false</item>
+    </style>
+
+    <style name="GuideTheme" parent="Theme.Leanback.Onboarding">
+        <item name="onboardingPageIndicatorStyle">@style/onb</item>
+    </style>
+    <style name="onb" parent="Widget.Leanback.OnboardingPageIndicatorStyle">
+        <item name="dotBgColor">@android:color/white</item>
+        <item name="arrowBgColor">@android:color/white</item>
+    </style>
+</resources>

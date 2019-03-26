@@ -1,0 +1,110 @@
+[
+    {
+        "displayName": {
+            "default": "Cadillacs and Dinosaurs", 
+            "en": "Cadillacs and Dinosaurs", 
+            "zh": "恐龙新世纪 (930201 世界版)"
+        }, 
+        "name": "dino.zip", 
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/7870-1.jpg", 
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/7870-1.jpg", 
+        "system": "arcade", 
+        "url": "http://download.freeroms.com/mame_roms/c/dino.zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "Cadillacs and Dinosaurs: The Arcade Game is a 1993 arcade game released by Capcom. It is a side-scrolling beat 'em up based on the comic book series Xenozoic Tales. The game was produced as a tie-in to the Cadillacs and Dinosaurs animated series which was aired during the same year the game was released."
+        }
+    }, 
+    {
+        "displayName": {
+            "default": "The King of Fighters 2000", 
+            "en": "The King of Fighters 2000 (NGM-2570) (NGH-2570)", 
+            "zh": "拳皇 2000 (NGM-2570) (NGH-2570)"
+        }, 
+        "name": "kof2000.zip", 
+        "fanart": "http://legacy.thegamesdb.net/banners/screenshots/26422-1.jpg", 
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/26422-1.png", 
+        "system": "arcade", 
+        "url": "http://download.freeroms.com/mame_roms/t/kof2000.zip",
+        "version": "1.0.0",
+		"isRecommended": true,
+        "description": {
+            "default": "After the incident at the previous tournament, the commander of the Ikari Team, Heidern, is determined to figure out the objective of the NESTS cartel so that he can stop them from achieving their ruthless ambition. A fellow commander and long-time friend of Heidern, named Ling, tells the veteran fighter that K′ and Maxima were once operatives of NESTS and that they may hold the key to locating the whereabouts of the mysterious organization. Using this information, Heidern decides to focus his efforts in using the next KOF tournament as a way to lure both K′ and Maxima out so that they can be captured and interrogated into telling the authorities about the NESTS cartel. Unknown to Heidern, however, Ling has his own agenda."
+        }
+    }, 
+    {
+        "displayName": {
+            "default": "The King of Fighters '97", 
+            "en": "The King of Fighters '97 (NGM-2320)", 
+            "zh": "拳皇 '97 (NGM-2320)"
+        }, 
+        "name": "kof97.zip", 
+        "fanart": "http://legacy.thegamesdb.net/banners/screenshots/25793-1.jpg", 
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/25793-1.jpg", 
+        "system": "arcade", 
+        "url": "http://download.freeroms.com/mame_roms/t/kof97.zip",
+        "version": "1.0.0",
+		"isRecommended": true,
+        "description": {
+            "default": "Despite the events at the end of the previous game, the KOF tournament was a huge commercial success and sparked a worldwide fighting craze. Within a few months of the tournament ending, various large corporations had held smaller KOF tournament qualifiers and constructed special KOF stadiums around the world, building the excitement up for the next tournament. News of the tournament spread through every form of media and fans and new fighters from across the globe come to watch the preliminary matches."
+        }
+    },
+    {
+        "displayName": {
+            "default": "Knights of Valour 2",
+            "en": "Knights of Valour 2 / Sangoku Senki 2 (ver. 107, 102, 100HK)",
+            "zh": "三国战纪 2 (V107, 102, 100, 香港版)"
+        },
+        "name": "kov2.zip",
+        "fanart": "http://legacy.thegamesdb.net/banners/screenshots/36185-1.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/36185-1.jpg",
+        "system": "arcade",
+        "url": "http://www.planetemu.net/php/roms/download.php#!post:id=3129563&download=T%C3%A9l%C3%A9charger",
+        "version": "1.0.0",
+		"isRecommended": true,
+        "description": {
+            "default": "This is the sequel to the original Knights Of Valour that plays like a mix of Capcom's \"Dungeons & Dragons\" series and Warriors Of Fate.\n\nA sidescrolling fighting game set in medieval China."
+        },
+        "dependencies": [
+            {
+                "name": "pgm.zip",
+                "url": "http://download.freeroms.com/mame_roms/p/pgm.zip"
+            }
+        ]
+    },
+    {
+        "displayName": {
+            "default": "Metal Slug",
+            "en": "Metal Slug", 
+            "zh": "合金弹头 - 超级坦克-001"
+        }, 
+        "name": "mslug.zip", 
+        "fanart": "http://legacy.thegamesdb.net/banners/screenshots/19516-2.jpg", 
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/19516-1.jpg", 
+        "system": "arcade", 
+        "url": "http://download.freeroms.com/mame_roms/m/mslug.zip",
+        "version": "1.0.0",
+		"isRecommended": true,
+        "description": {
+            "default": "The rebellion orchestrated by General Morden to bring about a new global regime is now ancient history, and order and peace has begun to return to the world. Morden, brought back into power, was attempting another coup d'état, but government forces got wind of the plot beforehand and pre-empted the impending assault.\nInstrumental in squashing Morden's rebel forces, Marco and Tarma of the Peregrine Falcon Strike Force are ordered to lead the team after their earlier requests for resignation were denied. Although General Morden has been written off as \"missing\" by his followers, they have hidden themselves throughout the world, and Marco and Tarma's abilities and experience are seen as a necessity to destroy remaining rebel strongholds, one by one. Throughout the furious fighting against the holdouts, Marco and Tarma cannot help but suspect Morden's involvement in this new evil plan for world domination."
+        }
+    },
+    {
+        "displayName": {
+            "default": "Warriors of Fate",
+            "en": "Warriors of Fate",
+            "zh": "三国志 II (921031 世界版)"
+        },
+        "name": "wof.zip",
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/12955-1.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/12955-1.png",
+        "system": "arcade",
+        "url": "http://www.planetemu.net/php/roms/download.php#!post:id=3132057&download=T%C3%A9l%C3%A9charger",
+        "version": "1.0.0",
+		"isRecommended": true,
+        "description": {
+            "default": "Warriors of Fate is a beat'em up with nine stages. Each contains large mobs including spearman, archers, strongmen, bomb-wielding opponents, and at least one boss. Using two buttons, Attack and Jump, the characters all have standard moves typical of Capcom side-scrollers of the day.\n\nThere is also a variety of weapons in the game which can be picked up. As with most side-scrollers, food is used to replenish health and can be found in various breakable containers in the game level. One notable feature of the game is the ability to summon a warhorse which adds more attacks to the characters, generally involving pole-arms. Most characters are given a special wrestling throw of their own, like in Final Fight and The Punisher.\n\nIn the Japanese version, the game follows Liu Bei's plight in Jingzhou from the Romance of the Three Kingdoms, a history-based novel from China, set in the Three Kingdoms period as Cao Cao sets to invade his lands. In the English adaptation, however, the Three Kingdoms theme was lost, and most names have been changed to names of Mongolian origin."
+        }
+    }
+]

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="prefs_key_map"
+    android:title="@string/settings_key_map"
+    android:icon="@drawable/dpad">
+
+    <PreferenceCategory
+        android:key="prefs_gamepad_connected"
+        android:title="@string/gamepad_connected" >
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="prefs_keyboard_map"
+        android:title="@string/keyboard_mapper">
+    </PreferenceCategory>
+</PreferenceScreen>

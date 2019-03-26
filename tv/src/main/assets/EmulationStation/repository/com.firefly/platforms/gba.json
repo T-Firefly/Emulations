@@ -1,0 +1,98 @@
+[
+    {
+        "displayName": {
+            "default": "Legend of Zelda, The - The Minish Cap (USA)",
+            "en": "Legend of Zelda, The - The Minish Cap (USA)"
+        },
+        "name": "Legend of Zelda, The - The Minish Cap (U).gba",
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/5954-1.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/5954-1.png",
+        "system": "gba",
+        "url": "https://romsmania.com/statics/data/Gameboy%20Advance/L-O/Legend%20of%20Zelda,%20The%20-%20The%20Minish%20Cap%20(U).zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "Link returns in an all-new Game Boy Advance adventure. When the sorcerer Vaati turns Princess Zelda to stone, the king of Hyrule sends Link on a quest that takes him to all-new locations. Using the power of a mystical hat called the Minish Cap, Link must travel through a fantastic world rife with new items, puzzles, and bosses. As Link, you can shrink down to either battle large enemies from within or find secret items. You can also unlock items and solve puzzles by fusing together magic relics."
+        }
+    },
+    {
+        "displayName": {
+            "default": "Oriental Blue - Ao no Tengai (Japan)",
+            "en": "Oriental Blue - Ao no Tengai (Japan)"
+        },
+        "name": "1214 - Oriental Blue - Ao no Tengai (J).gba",
+        "fanart": null,
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/30563-1.jpg",
+        "system": "gba",
+        "url": "http://download.freeroms.com/gameboy_advance_roms/oriental_blueao_no_tengai_(japan).zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "Oriental Blue: Ao No Tengai is an RPG from the Far East of Eden series. It has a unique magic system and different pathways the story can take depending on in-game choices."
+        }
+    },
+    {
+        "displayName": {
+            "default": "Kingdom Hearts - Chain of Memories (Europe) (En,Fr,De,Es,It)",
+            "en": "Kingdom Hearts - Chain of Memories (Europe) (En,Fr,De,Es,It)"
+        },
+        "name": "1989 - Kingdom Hearts - Chain of Memories (E) (M5).gba",
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/2335-1.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/2335-2.jpg",
+        "system": "gba",
+        "url": "http://download.freeroms.com/gameboy_advance_roms/kingdom_heartschain_of_memories.zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "The game takes place in Castle Oblivion, a mysterious castle kept by Marluxia. Sora and his teammates are told that the castle causes visitors to lose their memories upon entering. The lobby and areas between floors are white with flower-themed decorations, but each floor can be transformed into a different world from the first Kingdom Hearts game using \"world cards\" created from Sora's memories. Like before, many of the worlds are based on Disney films while the rest were created by Square Enix.\n\nUnlike the previous game, the worlds are created from Sora's memories. As such, many of the events experienced in Kingdom Hearts are relived in this game; Sora encounters memory-based versions of Disney characters that he has met before. The individual plotlines differ from those in the original game and revolve around the theme of memory. The exception is the Deep Jungle world which does not reappear in Chain of Memories. Just as Kingdom Hearts had several worlds created specifically for that game, Chain of Memories introduces Twilight Town, in addition to the original worlds of Kingdom Hearts. The world card for Twilight Town was created from memories on \"the other side of Sora's heart\"."
+        }
+    },
+    {
+        "displayName": {
+            "default": "Metal Max 2 Kai (Japan) (Rev 1)",
+            "en": "Metal Max 2 Kai (Japan) (Rev 1)"
+        },
+        "name": "2005 - Metal Max 2 Kai (J) (v1.1).gba",
+        "fanart": null,
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/46353-1.jpg",
+        "system": "gba",
+        "url": "http://download.freeroms.com/gameboy_advance_roms/metal_max_2_kai_(japan)_(v1.1).zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "Metal Max 2 Kai is a Role-Playing game, developed and published by Now Production, which was released in Japan in 2003."
+        }
+    },
+    {
+        "displayName": {
+            "default": "Final Fantasy VI Advance (Europe) (En,Fr,De,Es,It)",
+            "en": "Final Fantasy VI Advance (Europe) (En,Fr,De,Es,It)"
+        },
+        "name": "2753 - Final Fantasy VI Advance (E)(Eternity).gba",
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/3465-1.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/3465-1.jpg",
+        "system": "gba",
+        "url": "http://download.freeroms.com/gameboy_advance_roms/final_fantasy_vi_advance(eternity).zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "This title are more than a simple port of the SNES classic — every aspect of the games has been reviewed and enhanced. Additionally, a host of brand-new elements has been seamlessly merged with the original game, providing unexpected surprises for longtime fans. With new dungeons, new job classes, and other exciting features, both old-school players and newcomers can enjoy this genre-defining FINAL FANTASY title in a portable format."
+        }
+    },
+    {
+        "displayName": {
+            "default": "Super Robot Taisen - Original Generation (Europe)",
+            "en": "Super Robot Taisen - Original Generation (Europe)"
+        },
+        "name": "2807 - Super Robot Taisen - Original Generation (E).gba",
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/3515-1.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/3515-1.jpg",
+        "system": "gba",
+        "url": "http://download.freeroms.com/gameboy_advance_roms/super_robot_taisenoriginal_generation.zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "It is two hundred years after the beginning of the \"Space Era\", a time period when civilization began expanding into space. However, by the start of the 21st century, two meteors struck and destroyed much of the Earth, sending humanity into chaos. By year 179 of the Space Era, secret technology, dubbed Extra-Over Technology, or EOT, was discovered by the Earth Federal Government within a third meteor that had hit Earth at the Marquesas Islands in the South Pacific. Dr. Bian Zoldark, while investigating the meteor, also found out that the creators of the Extra-Over Technology were heading to Earth to reclaim it. In order to defend earth, the government starts to develop a group of humanoid mecha, known as Personal Troopers.\nThe alien race that created Extra-Over Technology, called the Aerogaters by the Earth Federal Government, initially attacks an Earth ship sent out to investigate their presence in the far reaches of the solar system. This initial skirmish ends in a defeat for the Aerogaters, prompting them to sue for negotiations with the Earth Federation Army. Talks are arranged to take place at a secret facility in Antarctica, but the talks are targeted by a rogue faction called the Divine Crusaders.\nThe Divine Crusaders destroys the Aerogater delegation, then turn on the Federation forces. Bian Zoldark, revealing himself to be the leader of the Divine Crusaders, announces the existence of the Aerogaters to the world and rebel against the Earth Government. As Earth spins into civil war, a new Aerogater force is on the move, seeking to reclaim their lost technology..."
+        }
+    }
+]

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.firefly.emulationstation">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+
+    <application
+        android:name=".ESApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:isGame="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+            android:value="GlideModule" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/GameListTheme" />
+        <activity android:name=".gamedetail.DetailsActivity" />
+        <activity android:name=".commom.error.BrowseErrorActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:banner="@drawable/banner"
+            android:icon="@drawable/logo"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".scraper.ScraperActivity" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:theme="@style/CardPresenterNoDescription" />
+        <activity android:name=".inputmap.InputMapActivity" />
+        <activity
+            android:name=".settings.MainSettingsActivity"
+            android:theme="@style/LeanbackPreferences" />
+
+        <receiver
+            android:name=".MediaMountedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".settings.about.AboutActivity" />
+        <activity
+            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+
+        <service android:name=".services.downloader.DownloadService" />
+
+        <activity
+            android:name=".guide.GuideActivity"
+            android:theme="@style/GuideTheme" />
+
+        <service
+            android:name=".services.RetroArchDownloadService"
+            android:exported="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".settings.retroarch.RetroArchInfoActivity" />
+        <activity
+            android:name=".gamerepo.RepoActivity"
+            android:exported="true"
+            android:theme="@style/DialogActivityTheme" />
+
+        <receiver
+            android:name=".services.DownloadReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="DownloadService.COMPLETED" />
+                <action android:name="DownloadService.ERROR" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".services.VersionCheckService"
+            android:exported="false" />
+
+        <activity android:name=".update.NewVersionDialog"
+            android:theme="@style/DialogActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.firefly.emulationstation.NEW_RETROARCH_VERSION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".update.UpdateDownloadDialog"
+            android:theme="@style/DialogActivityTheme" />
+    </application>
+
+</manifest>

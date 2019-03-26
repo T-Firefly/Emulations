@@ -1,0 +1,291 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "85370f711653d3b1dd2c8883a3afb188",
+    "entities": [
+      {
+        "tableName": "Game",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT NOT NULL, `displayNames` TEXT, `description` TEXT, `path` TEXT NOT NULL, `backgroundImageUrl` TEXT, `cardImageUrl` TEXT, `icon` TEXT, `videoUrl` TEXT, `developer` TEXT, `rating` REAL NOT NULL, `system` TEXT, `romPathId` TEXT, `ext` TEXT, `isScraped` INTEGER NOT NULL, `isStar` INTEGER NOT NULL, `repository` TEXT, `status` INTEGER NOT NULL, PRIMARY KEY(`path`))",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "displayNames",
+            "columnName": "displayNames",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "path",
+            "columnName": "path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "backgroundImageUrl",
+            "columnName": "backgroundImageUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardImageUrl",
+            "columnName": "cardImageUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "icon",
+            "columnName": "icon",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "videoUrl",
+            "columnName": "videoUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "developer",
+            "columnName": "developer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "system",
+            "columnName": "system",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "romPathId",
+            "columnName": "romPathId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ext",
+            "columnName": "ext",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isScraped",
+            "columnName": "isScraped",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isStar",
+            "columnName": "isStar",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "repository",
+            "columnName": "repository",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "path"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "GameRomPath",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`path` TEXT NOT NULL, `romPathId` TEXT, `isScanned` INTEGER NOT NULL, `scanDate` TEXT, PRIMARY KEY(`path`))",
+        "fields": [
+          {
+            "fieldPath": "path",
+            "columnName": "path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "romPathId",
+            "columnName": "romPathId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isScanned",
+            "columnName": "isScanned",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scanDate",
+            "columnName": "scanDate",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "path"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Fanart",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `original` TEXT, `thumb` TEXT, `game` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "original",
+            "columnName": "original",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "thumb",
+            "columnName": "thumb",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "game",
+            "columnName": "game",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "DownloadInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `url` TEXT, `size` INTEGER NOT NULL, `progress` INTEGER NOT NULL, `status` INTEGER NOT NULL, `type` INTEGER NOT NULL, `path` TEXT, `repository` TEXT, `version` TEXT, `system` TEXT, `createDate` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "progress",
+            "columnName": "progress",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "path",
+            "columnName": "path",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "repository",
+            "columnName": "repository",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "version",
+            "columnName": "version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "system",
+            "columnName": "system",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createDate",
+            "columnName": "createDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"85370f711653d3b1dd2c8883a3afb188\")"
+    ]
+  }
+}

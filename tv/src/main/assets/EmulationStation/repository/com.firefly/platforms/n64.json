@@ -1,0 +1,77 @@
+[
+    {
+        "displayName": {
+            "default": "Mario Kart 64 (E) (V1.1) [!]"
+        },
+        "name": "Mario Kart 64 (E) (V1.1) [!].z64",
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/266-2.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/266-1.jpg",
+        "system": "n64",
+        "url": "https://romsmania.com/statics/data/Nintendo%2064/L-O/Mario%20Kart%2064%20(E)%20(V1.1)%20[!].zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "Three… Two… One… GO!  The signal light changes and you drop the pedal to the metal.  Take on up to three friends in the split-screen VS games, or race solo in the Mario GP.  Tell your friends to bring it on in the highly competitive Battle mode.  Advanced features allow you to race with your “Ghost”.  The driving data from your best run appears as a transparent character on the screen.  No longer must you simply race against the clock -- you can actually race against yourself!\n\n* Save your hottest Ghost data to a portable N64 Controller Pak!\n* Collect multiple power-up items!\n* Twenty different courses -- 4 Cups with 4 courses each and 4 special Battle mode courses!\n* Everyone’s favorite characters are back and gorgeously rendered, including two new additions, Donkey Kong and Wario!"
+        }
+    },
+    {
+        "displayName": {
+            "default": "Super Mario 64 (USA)"
+        },
+        "name": "Super Mario 64 (USA).z64",
+        "fanart": null,
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/52753-1.jpg",
+        "system": "n64",
+        "url": "https://romsmania.com/statics/data/Nintendo%2064/P-T/Super%20Mario%2064%20(U)%20[!].zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "Super Mario 64 (USA)"
+        }
+    },
+    {
+        "displayName": {
+            "default": "Conker's Bad Fur Day (E) [!]"
+        },
+        "name": "Conker's Bad Fur Day (E) [!].z64",
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/249-1.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/249-1.jpg",
+        "system": "n64",
+        "url": "http://n64.freeroms.com/n64-roms/3/choroq64iijap.zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "The day after his 21st birthday bash, Conker's sporting the worst hangover ever, and he just can't seem to find his way home. Prepare to stagger through randy, raunchy, raucous scenarios crammed full of bad manners, twisted humor, and graphic bodily functions. Unless you're a fan of violence, foul language, and racy innuendo, you'd best steer clear of this one.\n\nAlthough visually similar to Rare's family-oriented Nintendo 64 platform games Banjo-Kazooie and Donkey Kong 64, Conker's Bad Fur Day was designed for mature audiences and features graphic violence, alcohol and tobacco use, profanity, vulgar humor and pop culture references. It was developed over the course of four years and was originally intended for a family audience, but was ultimately retooled into its current form because previews were criticised for being both too cute and similar to Rare's earlier platform games."
+        }
+    },
+    {
+        "displayName": {
+            "default": "Gex 3 - Deep Cover Gecko (E) (M3)[!]"
+        },
+        "name": "Gex 3 - Deep Cover Gecko (E) (M3)[!].z64",
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/1108-1.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/1108-1.jpg",
+        "system": "n64",
+        "url": "http://n64.freeroms.com/n64-roms/3/gex3deepcovergecko.zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "When Gex is watching TV one day, he discovers that Rez has kidnapped Agent Xtra (the agent from Gex: Enter the Gecko's backstory), head of the TV Terrorist Defense Unit, to get to him. He teleports to the batcave-like lair he has in the Media Dimension, and begins another adventure. Each level parodies a certain aspect of television culture (here the levels exist as stand-alone channels). Gex enters each level through a television set. He must collect remote controls to advance to the next level in order to complete his mission and rescue Xtra."
+        }
+    },
+    {
+        "displayName": {
+            "default": "Gex 64 - Enter the Gecko (E) [!]"
+        },
+        "name": "Gex 64 - Enter the Gecko (E) [!].z64",
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/1109-1.jpg",
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/1109-1.jpg",
+        "system": "n64",
+        "url": "http://n64.freeroms.com/n64-roms/3/gex64enterthegecko.zip",
+        "version": "1.0.0",
+        "isRecommended": true,
+        "description": {
+            "default": "Gex 64 was the Nintendo 64 port of Gex: Enter the Gecko.\n\nThis version featured a new level, which replaced the secret levels. \"Gecques Cousteau\", which is centered on the RMS Titanic, is played almost entirely underwater. The only land parts of the level are at the entrance to the Titanic, which is sunk by the iceberg.\n\nOther changes include fewer bonus levels and fewer quotes, due to the Nintendo 64 cartridges storing significantly less data for games than CDs. Some of the sound effects were altered slightly."
+        }
+    }
+]

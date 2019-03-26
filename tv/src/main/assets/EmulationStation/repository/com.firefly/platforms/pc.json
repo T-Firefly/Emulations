@@ -1,0 +1,19 @@
+[
+    {
+        "displayName": {
+            "default": "Cave Story", 
+            "en": "Cave Story", 
+            "zh": "洞窟物语"
+        }, 
+        "name": "Doukutsu.exe", 
+        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/8333-1.jpg", 
+        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/8333-1.jpg", 
+        "system": "pc", 
+        "url": "http://buildbot.libretro.com/assets/cores/NXEngine/Cave%20Story%20%28En%29.zip",
+        "version": "1.0.0",
+        "isRecommended": true, 
+        "description": {
+            "default": "Arguably the most well-known indie game of all time, Cave Story is an action-adventure game featuring a completely original storyline wrapped with personality, mystery and hours of fast-paced fun. \nYou wake up in a dark cave with no memory of who you are, where you came from or why you're in such a place. Uncovering Mimiga Village you discover that the once-carefree Mimigas are in danger at the hands of a maniacal scientist. The Mimigas’ only hope rest squarely on the shoulders of a quiet, amnesiac boy who can't remember his own name."
+        }
+    }
+]

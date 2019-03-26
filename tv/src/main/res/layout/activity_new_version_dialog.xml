@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dialog_new_retroarch_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".update.NewVersionDialog">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_version"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/retroarch_have_new_version"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+        android:textColor="#A9A9A9" />
+
+    <LinearLayout
+        android:id="@+id/release_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/release_log" />
+
+        <TextView
+            android:id="@+id/release_log_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="auto"
+            android:maxLines="6"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/ignore_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@null"
+        android:button="@drawable/checkbox_selector"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:text="@string/ignore_this_update"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/negative_btn"
+            style="@style/DialogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/cancel" />
+
+        <Space
+            android:layout_width="26dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/positive_btn"
+            style="@style/DialogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/update_1">
+            <requestFocus />
+        </Button>
+
+    </LinearLayout>
+</LinearLayout>

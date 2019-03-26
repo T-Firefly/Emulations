@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.firefly.emulationstation.gamerepo.CategoryFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222324"
+    android:orientation="vertical"
+    android:paddingBottom="18dp"
+    android:paddingTop="18dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/fragment_category">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <RadioGroup
+            android:id="@+id/install_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/list"
+            android:layout_marginStart="18dp"
+            android:paddingTop="16dp">
+
+            <RadioButton
+                android:id="@+id/not_install_rb"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@drawable/radio_btn"
+                android:checked="true"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/not_install"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/installed_rb"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@drawable/radio_btn"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/installed"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+
+</ScrollView>

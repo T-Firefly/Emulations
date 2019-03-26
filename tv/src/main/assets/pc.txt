@@ -1,0 +1,3 @@
+doconfig:::"en:Cave Story - config::zh:洞窟物语 - 配置"
+doukutsu:::"en:Cave Story::zh:洞窟物语"
+orgview:::"en:Cave Story - OrgView::zh:洞窟物语 - OrgView"

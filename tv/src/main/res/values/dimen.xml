@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="game_card_width_big">165dp</dimen>
+    <dimen name="game_card_height_big">220dp</dimen>
+    <dimen name="dialog_activity_height">594dp</dimen>
+    <dimen name="dialog_activity_width">884dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="game_grid_item_h_space">24dp</dimen>
+    <dimen name="game_grid_item_v_space">20dp</dimen>
+
+    <dimen name="progress_bar_height_material">4dp</dimen>
+
+    <dimen name="menu_dialog_padding_top">8dp</dimen>
+    <dimen name="menu_dialog_padding_bottom">8dp</dimen>
+
+    <dimen name="dialog_new_retroarch_width">394dp</dimen>
+    <dimen name="dialog_new_retroarch_height">200dp</dimen>
+
+    <dimen name="prompt_dialog_padding">24dp</dimen>
+    <dimen name="prompt_dialog_list_height">320dp</dimen>
+    <dimen name="prompt_dialog_list_item_height">46dp</dimen>
+</resources>
