@@ -200,7 +200,8 @@ public class SplashActivity extends DaggerActivity {
 
     private void requestPermissions() {
         ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE},
                 REQUEST_CODE_CHECK_PERMISSION);
     }
 
@@ -214,7 +215,8 @@ public class SplashActivity extends DaggerActivity {
         }
 
         for (int i = 0; i < permissions.length; ++i) {
-            if (permissions[i].equals(Manifest.permission.READ_EXTERNAL_STORAGE) &&
+            if ((permissions[i].equals(Manifest.permission.READ_EXTERNAL_STORAGE) ||
+                    permissions[i].equals(Manifest.permission.WRITE_EXTERNAL_STORAGE)) &&
                     grantResults[i] != PackageManager.PERMISSION_GRANTED) {
                 Utils.showToast(this, R.string.notice_for_request_permission);
                 finish();
