@@ -6,8 +6,8 @@
             "zh": "洞窟物语"
         }, 
         "name": "Doukutsu.exe", 
-        "fanart": "http://legacy.thegamesdb.net/banners/fanart/original/8333-1.jpg", 
-        "boxart": "http://legacy.thegamesdb.net/banners/boxart/thumb/original/front/8333-1.jpg", 
+        "fanart": "https://cdn.thegamesdb.net/images/original/fanart/8333-1.jpg", 
+        "boxart": "https://cdn.thegamesdb.net/images/thumb/boxart/front/8333-1.jpg",
         "system": "pc", 
         "url": "http://buildbot.libretro.com/assets/cores/NXEngine/Cave%20Story%20%28En%29.zip",
         "version": "1.0.0",
