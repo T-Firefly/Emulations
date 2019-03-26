@@ -14,9 +14,6 @@ import com.firefly.emulationstation.data.remote.TheGamesDb.bean.ImagesResponse;
 import com.firefly.emulationstation.data.remote.TheGamesDb.bean.Platform;
 import com.firefly.emulationstation.data.remote.TheGamesDb.bean.PlatformsResponse;
 import com.firefly.emulationstation.data.remote.TheGamesDb.bean.RemoteGame;
-import com.firefly.emulationstation.data.remote.TheGamesDb.legacy.bean.TheGamesDbGame;
-import com.firefly.emulationstation.data.remote.TheGamesDb.legacy.bean.TheGamesDbGames;
-import com.firefly.emulationstation.data.remote.TheGamesDb.legacy.service.TheGamesDbLegacyService;
 import com.firefly.emulationstation.data.remote.TheGamesDb.service.TheGamesDbService;
 
 import java.io.DataInputStream;
@@ -54,22 +51,18 @@ public class TheGamesDbSource implements GameRemoteSource {
     private static final String PLATFORMS_SAVE_FILE = "platforms.data";
     private static final long VALID_TIME = 3*24*60*60*1000;
 
-    private TheGamesDbLegacyService mTheGamesDbLegacyService;
     private TheGamesDbService mTheGamesDbService;
 
     private String mGameName;
     private String mPlatform;
-    private List<TheGamesDbGame> mOptionGameInfo;
     private Map<String, Integer> mPlatforms = null;
     private Context mContext;
     private SharedPreferences mSettings;
 
     @Inject
-    TheGamesDbSource(TheGamesDbLegacyService theGamesDbLegacyService,
-                     TheGamesDbService theGamesDbService,
+    TheGamesDbSource(TheGamesDbService theGamesDbService,
                      Context context,
                      SharedPreferences settings) {
-        mTheGamesDbLegacyService = theGamesDbLegacyService;
         mTheGamesDbService = theGamesDbService;
         mContext = context;
         mSettings = settings;
@@ -77,122 +70,56 @@ public class TheGamesDbSource implements GameRemoteSource {
 
     @Override
     public Observable<Game> getGameDetail(final Game game, final String platform) {
-        String name = getDisplayName(game);
+       return getGameDetails(game, platform)
+                .flatMap(new Function<GamesResponse, ObservableSource<Game>>() {
+                    @Override
+                    public ObservableSource<Game> apply(GamesResponse gamesResponse)
+                            throws Exception {
+                        if (gamesResponse != null && gamesResponse.getData().getCount() > 0) {
+                            RemoteGame tGame = gamesResponse.getData().getGames().get(0);
+                            game.merge(tGame.toGame());
 
-        if (!useNewApi()) {
-            return mTheGamesDbLegacyService
-                    .getGameDetail(name, platform)
-                    .filter(new Predicate<TheGamesDbGames>() {
-                        @Override
-                        public boolean test(TheGamesDbGames theGamesDbGames) throws Exception {
-                            return (theGamesDbGames.getGames() != null);
-                        }
-                    })
-                    .flatMap(new Function<TheGamesDbGames, ObservableSource<Game>>() {
-                        @Override
-                        public ObservableSource<Game> apply(TheGamesDbGames theGamesDbGames)
-                                throws Exception {
-                            mOptionGameInfo = theGamesDbGames.getGames();
-                            TheGamesDbGame gameDb = mOptionGameInfo.get(0);
-
-                            mGameName = game.getName();
-                            mPlatform = platform;
-                            game.merge(gameDb.toGame());
+                            getBoxart(gamesResponse, tGame.getId(), game);
+                            ImagesResponse imagesResponse = getFantarts(gamesResponse, game, platform);
+                            getFantart(imagesResponse, tGame.getId(), game);
 
                             return Observable.just(game);
                         }
-                    });
-        } else {
-            return getGameDetails(game, platform)
-                    .flatMap(new Function<GamesResponse, ObservableSource<Game>>() {
-                        @Override
-                        public ObservableSource<Game> apply(GamesResponse gamesResponse)
-                                throws Exception {
-                            if (gamesResponse != null && gamesResponse.getData().getCount() > 0) {
-                                RemoteGame tGame = gamesResponse.getData().getGames().get(0);
-                                game.merge(tGame.toGame());
 
-                                getBoxart(gamesResponse, tGame.getId(), game);
-                                ImagesResponse imagesResponse = getFantarts(gamesResponse, game, platform);
-                                getFantart(imagesResponse, tGame.getId(), game);
+                        return Observable.error(new Throwable());
+                    }
+                });
 
-                                return Observable.just(game);
-                            }
-
-                            return Observable.error(new Throwable());
-                        }
-                    });
-        }
     }
 
     @Override
     public Observable<List<Game>> getGameDetailOptions(final Game game, final String platform) {
-        if (useNewApi()) {
-            return getGameDetails(game, platform)
-                    .flatMap(new Function<GamesResponse, ObservableSource<List<Game>>>() {
+        return getGameDetails(game, platform)
+                .flatMap(new Function<GamesResponse, ObservableSource<List<Game>>>() {
 
-                        @Override
-                        public ObservableSource<List<Game>> apply(GamesResponse gamesResponse)
-                                throws Exception {
-                            List<Game> games = new ArrayList<>();
-
-                            if (gamesResponse != null && gamesResponse.getData().getCount() > 0) {
-                                games = new ArrayList<>((int) gamesResponse.getData().getCount());
-                                List<RemoteGame> remoteGames = gamesResponse.getData().getGames();
-                                ImagesResponse imagesResponse = getFantarts(gamesResponse, game, platform);
-
-                                for (RemoteGame remoteGame : remoteGames) {
-                                    Game g = remoteGame.toGame();
-                                    getBoxart(gamesResponse, remoteGame.getId(), g);
-                                    getFantart(imagesResponse, remoteGame.getId(), g);
-
-                                    games.add(g);
-                                }
-                            }
-
-                            return Observable.just(games);
-                        }
-                    });
-        } else {
-            return legacyApi(game, platform);
-        }
-    }
-
-    private Observable<List<Game>> legacyApi(final Game game, final String platform) {
-        if (mOptionGameInfo != null && game.getName().equals(mGameName) &&
-                platform.equals(mPlatform)) {
-            List<Game> games = new ArrayList<>();
-            for (TheGamesDbGame gameDb : mOptionGameInfo) {
-                games.add(gameDb.toGame());
-            }
-
-            return Observable.just(games);
-        }
-
-        String name = getDisplayName(game);
-
-        return mTheGamesDbLegacyService
-                .getGameDetail(name, platform)
-                .flatMap(new Function<TheGamesDbGames, ObservableSource<List<Game>>>() {
                     @Override
-                    public ObservableSource<List<Game>> apply(TheGamesDbGames theGamesDbGames)
+                    public ObservableSource<List<Game>> apply(GamesResponse gamesResponse)
                             throws Exception {
-                        if (theGamesDbGames.getGames() == null) {
-                            return Observable.error(new Throwable(""));
-                        }
-
                         List<Game> games = new ArrayList<>();
-                        mOptionGameInfo = theGamesDbGames.getGames();
-                        mGameName = game.getName();
-                        mPlatform = platform;
 
-                        for (TheGamesDbGame theGamesDbGame : mOptionGameInfo) {
-                            games.add(theGamesDbGame.toGame());
+                        if (gamesResponse != null && gamesResponse.getData().getCount() > 0) {
+                            games = new ArrayList<>((int) gamesResponse.getData().getCount());
+                            List<RemoteGame> remoteGames = gamesResponse.getData().getGames();
+                            ImagesResponse imagesResponse = getFantarts(gamesResponse, game, platform);
+
+                            for (RemoteGame remoteGame : remoteGames) {
+                                Game g = remoteGame.toGame();
+                                getBoxart(gamesResponse, remoteGame.getId(), g);
+                                getFantart(imagesResponse, remoteGame.getId(), g);
+
+                                games.add(g);
+                            }
                         }
 
                         return Observable.just(games);
                     }
                 });
+
     }
 
     private String getDisplayName(Game game) {
@@ -229,10 +156,6 @@ public class TheGamesDbSource implements GameRemoteSource {
         return Observable.concat(getFromCache(game, platform), remote)
                 .firstElement()
                 .toObservable();
-    }
-
-    private boolean useNewApi() {
-        return mSettings.getBoolean(Constants.SETTINGS_USE_THE_GAMES_DB_NEW_API, false);
     }
 
     private Observable<GamesResponse> getFromCache(final Game game, final String platform) {

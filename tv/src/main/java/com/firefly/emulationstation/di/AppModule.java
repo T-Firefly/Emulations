@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v17.leanback.app.ProgressBarManager;
 
-import com.firefly.emulationstation.data.remote.TheGamesDb.legacy.service.TheGamesDbLegacyService;
 import com.firefly.emulationstation.data.remote.TheGamesDb.service.TheGamesDbService;
 import com.firefly.emulationstation.utils.RetrofitBuilder;
 
@@ -30,13 +29,6 @@ public class AppModule {
     @Provides
     Context provideContext() {
         return mApplication;
-    }
-
-    @Singleton
-    @Provides
-    TheGamesDbLegacyService provideRetrofit() {
-        return new RetrofitBuilder(RetrofitBuilder.CONVERTER_SIMPLE_XML, false)
-                .create(TheGamesDbLegacyService.class, "http://legacy.thegamesdb.net/api/");
     }
 
     @Singleton

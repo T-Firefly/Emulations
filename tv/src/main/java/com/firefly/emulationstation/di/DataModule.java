@@ -15,6 +15,7 @@ import com.firefly.emulationstation.data.local.db.migration.Migration_2_3;
 import com.firefly.emulationstation.data.local.db.migration.Migration_3_4;
 import com.firefly.emulationstation.data.local.db.migration.Migration_4_5;
 import com.firefly.emulationstation.data.local.db.migration.Migration_5_6;
+import com.firefly.emulationstation.data.local.db.migration.Migration_6_7;
 import com.firefly.emulationstation.data.repository.SystemsRepository;
 
 import javax.inject.Singleton;
@@ -37,7 +38,8 @@ public class DataModule {
                         new Migration_2_3(),
                         new Migration_3_4(settings),
                         new Migration_4_5(),
-                        new Migration_5_6(settings)
+                        new Migration_5_6(settings),
+                        new Migration_6_7()
                 )
                 .build();
     }
