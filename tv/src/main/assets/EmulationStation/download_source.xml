@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <res>
-    <retroarch name="retroarch.apk">https://github.com/hyt-tchip/retroarch-release/raw/master/version.json</retroarch>
+    <retroarch name="retroarch.apk">https://github.com/T-Firefly/RetroArch/raw/firefly/version.json</retroarch>
     <cores>
         <core name="fbalpha_libretro_android.so.zip">
             http://buildbot.libretro.com/nightly/android/latest/armeabi-v7a/fbalpha_libretro_android.so.zip
